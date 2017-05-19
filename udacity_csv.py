@@ -23,6 +23,7 @@ def get_from_www():
 	j_courses=json_response['courses']
 	j_tracks=json_response['tracks']
 	j_degrees=json_response['degrees']
+	print 'got '+str(len(j_courses))+' courses from udacity.com'
 	return [j_courses,j_tracks,j_degrees]
 
 def get_csv_from_db(collection,keys):
