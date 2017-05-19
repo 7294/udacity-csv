@@ -36,12 +36,12 @@ def get_csv_from_db(collection,keys):
 		for key in keys:
 			if key in doc:
 				try:
-					doc_str+=doc[key].encode('ascii','ignore')+','
+					doc_str+=doc[key].encode('ascii','ignore').replace(',',';')+','
 				except:
 					doc_str+=str(doc[key])+','
 			else:
 				doc_str+=','
-		retval.append(doc_str[:-1].replace('\n','<br/>').replace(',',';'))
+		retval.append(doc_str[:-1].replace('\n','<br/>'))
 	return retval
 
 def write_csv():
