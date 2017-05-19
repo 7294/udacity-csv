@@ -41,7 +41,7 @@ def get_csv_from_db(collection,keys):
 					doc_str+=str(doc[key])+','
 			else:
 				doc_str+=','
-		retval.append(doc_str[:-1].replace('\n','<br/>'))
+		retval.append(doc_str[:-1].replace('\n','<br/>').replace(',',';'))
 	return retval
 
 def write_csv():
