@@ -5,8 +5,8 @@ import csv
 client = MongoClient()
 db = client['udacity_cache']
 courses = db['courses']
-tracks = db['tracks']
-degrees = db['degrees']
+#TODO tracks = db['tracks']
+#TODO degrees = db['degrees']
 
 now=datetime.datetime.now()
 one_week_ago=now-datetime.timedelta(days=7)
